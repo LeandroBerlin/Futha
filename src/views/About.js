@@ -15,14 +15,6 @@ export default function About() {
 
                 <p>Heilung is amplified history from early medieval northern Europe and should not be mistaken for a modern political or religious statement of any kind. Heilung is sounds from the northern european iron age and viking period.</p>
 
-                <p className="ceremony">
-                    "Remember that we all are brothers<br />
-                    All people, beasts, tree and stone and wind<br />
-                    We all descend from the one great being<br />
-                    That was always there<br />
-                    Before people lived and named it<br />
-                    Before the first seed sprouted"</p>
-
 
                 <p>ᚠᚢᚦᚨ (Futha) was created using <a href="https://reactjs.org/">React</a>, <a href="https://getbootstrap.com/" target="blank">Bootstrap</a>, <a href="https://github.com/Wufe/react-particles-js" target="blank">React Particles</a> and the Futha module. The source code is published on Github and deployed on Zeit</p>
             </div>

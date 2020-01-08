@@ -1,6 +1,7 @@
 //alphabeth
 const alpha = [
     { space: '᛫' },
+    { dot: '᛬' },
     { a: 'ᚨ' },
     { b: 'ᛒ' },
     { c: 'ᚲ' },
@@ -62,6 +63,7 @@ const elder_futhark = [
 //the rune rappresenting an alphabeth letter
 const alphaRune = char => {
     if (char === " ") char = "space"
+    if (char === ".") char = "dot"
     for (var i = 0; i < alpha.length; i++) {
         if (alpha[i][char]) return alpha[i][char];
     }
@@ -71,8 +73,9 @@ const infoRune = c => elder_futhark.filter(r => r.rune === c)
 //accept a string and traslate to runes
 const stringFuthark = str => str.trim()
     .toLowerCase()
-    .replace('th', 'θ')
-    .replace('ng', 'ŋ')
+    .replace(/th/g, 'θ') // replace with þurisaz
+    .replace(/ng/g, 'ŋ') // replace with ingwaz
+    .replace(/\. /g, '.') // replace dot space
     .split('')
     .map(c => alphaRune(c))
     .join('')

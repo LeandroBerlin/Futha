@@ -4,6 +4,10 @@ body{
   background-color: #282c34;
 }
 
+#root{
+  flex: 0 0 100%;
+}
+
 .Futha-main {
   height:auto;
   display: flex;
@@ -46,9 +50,14 @@ body{
 .content{
 text-align: center;
 position: relative;
-top:25vh;
+top:20vh;
 max-width: 60vw;
 word-wrap: break-word;
+}
+
+.counter {
+  min-height: 1.5em;
+  &span{text-align: right!important;}
 }
 
 .about {
@@ -56,7 +65,8 @@ word-wrap: break-word;
 }
 
 .form-control{
-  max-width: 36vw;
+  width: 40vw;
+  max-width: 40vw;
   margin: 0 auto;
 }
 
@@ -73,19 +83,20 @@ word-wrap: break-word;
 
 footer{
 position: fixed;
-height: 2em;
+height: 1.6em;
 bottom: 0em;
 width: 100%;
 text-align: center;
 color:white;
 background: rgba(52, 58, 64, 1)!important;
+
 }
 
 .navbar{
   background: rgba(52, 58, 64, .5)!important;
 }
 
-cit,code{
+span,code{
   color:red;
   margin: 0 .3em;
 }

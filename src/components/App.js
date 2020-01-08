@@ -57,7 +57,7 @@ function App() {
           },
           "retina_detect": true
         }} />
-      <div>
+      <>
         <Navbar />
         <Switch>
           <Route exact path='/' component={Home} />
@@ -65,7 +65,7 @@ function App() {
           <Route path='/about' component={About} />
         </Switch>
         <Footer />
-      </div>
+      </>
     </Router>
   );
 }
