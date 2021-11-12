@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Particles from 'react-particles-js'
+// import Particles from 'react-particles-js'
+import Particles from "react-tsparticles";
 import Navbar from '../views/Navbar';
 import Footer from '../views/Footer';
 import '../styles/App.scss';
@@ -9,53 +10,76 @@ import Type from './Type'
 import About from '../views/About'
 
 function App() {
+
+  const particlesInit = (main) => {
+    console.log(main);
+
+    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+  };
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+
   return (
 
     <Router>
       <Particles
         className="particles-canvas"
-        params={{
-          "particles": {
-            "number": {
-              "value": 500,
-              "density": {
-                "enable": true,
-                "value_area": 1500
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={{
+          fpsLimit: 60,
+          particles: {
+            number: {
+              value: 500,
+              density: {
+                enable: true,
+                value_area: 1500
               }
             },
-            "line_linked": {
-              "enable": true,
-              "opacity": 0.02
+            line_linked: {
+              enable: true,
+              opacity: 0.01
             },
-            "move": {
-              "direction": "right",
-              "speed": 0.25
+            size: {
+              value: 1
             },
-            "size": {
-              "value": 1
+            opacity: {
+              value: 0.5,
+            }, move: {
+              direction: "none",
+              enable: true,
+              outMode: "bounce",
+              random: false,
+              speed: 0.65,
+              straight: false,
             },
-            "opacity": {
-              "anim": {
-                "enable": true,
-                "speed": 1,
-                "opacity_min": 0.05
+          },
+          interactivity: {
+            events: {
+              onclick: {
+                enable: true,
+                mode: "push"
               }
+            },
+            modes: {
+              bubble: {
+                distance: 400,
+                duration: 2,
+                opacity: 0.8,
+                size: 40,
+              },
+              push: {
+                quantity: 4,
+                particles_nb: 1
+              }, repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
             }
           },
-          "interactivity": {
-            "events": {
-              "onclick": {
-                "enable": true,
-                "mode": "push"
-              }
-            },
-            "modes": {
-              "push": {
-                "particles_nb": 1
-              }
-            }
-          },
-          "retina_detect": true
+          detectRetina: true
         }} />
       <>
         <Navbar />
