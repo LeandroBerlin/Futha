@@ -39,7 +39,7 @@ export default function Type() {
                     </div>
 
                 </form>
-                <div className="futhark">{futha}</div>
+                <div className="futhark" title="Click to Copy" onClick={() => { navigator.clipboard.writeText(futha) }}>{futha}</div>
             </div>
         </main>
     )
