@@ -26,7 +26,7 @@ export default function Type() {
             <div className="content">
                 <div className="counter">{futha &&
                     (
-                        <small><span className="badge badge-danger">{futha.length}</span> runes written</small>
+                        <small><span className="badge bg-danger">{futha.length}</span> runes written</small>
                     )
 
                 }</div>
