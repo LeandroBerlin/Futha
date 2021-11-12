@@ -11,7 +11,7 @@ Heilung is amplified history from early medieval northern Europe and should not 
 
 ## Credits
 
-ᚠᚢᚦᚨ (Futha) was created in 2020 with <3 by [Leandro](https://leandro.berlin) using [React](https://reactjs.org/), [Bootstrap](https://getbootstrap.com/), [React Particles](https://github.com/Wufe/react-particles-js) and the Futha module. The source code is published on Github.
+ᚠᚢᚦᚨ (Futha) was developed with ᚹ in Berlin by [Leandro](https://leandro.berlin) using [React](https://reactjs.org/), [Bootstrap](https://getbootstrap.com/), [React Particles](https://github.com/Wufe/react-particles-js) and the Futha module. The source code is published on Github.
 
 ## Screenshot
 <img src="./futha.png">
